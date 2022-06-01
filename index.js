@@ -15,6 +15,8 @@ const db = mysql.createPool({
     database:'ram_contact'
 })
 
+const port = process.env.PORT ;
+
 app.get('/api/get',(req,res)=>{
 const sqlget = `SELECT * FROM contact_db`;
 db.query(sqlget,(err,result)=>{
@@ -65,6 +67,6 @@ app.delete('/api/remove/:id',(req,res)=>{
 
 
 
-app.listen(5000,()=>{
-    console.log('App is listening at Port 5000')
+app.listen(port || 5000,()=>{
+    console.log(`App is listening at Port ${port}`)
 })
