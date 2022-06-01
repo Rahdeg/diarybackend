@@ -64,15 +64,6 @@ app.delete('/api/remove/:id',(req,res)=>{
     
 
 
-app.get('/',(req,res)=>{
-    // const sqlGet = `INSERT INTO contact_db (name,email,contact) VALUE ('raheem','walett95@gmail.com','08106473829')`;
-    // db.query(sqlGet,(err,result)=>{
-    //     console.log('error', err);
-    //     console.log('result', result);
-    //     res.json('welcome to express');
-    // })
-   
-})
 
 app.listen(5000,()=>{
     console.log('App is listening at Port 5000')
