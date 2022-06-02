@@ -7,12 +7,11 @@ const mysql = require('mysql2');
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
-
 const db = mysql.createPool({
-    host:'localhost',
-    user:'root',
-    password:'Diamond2022@',
-    database:'ram_contact'
+    host:'us-cdbr-east-05.cleardb.net',
+    user:'b5e8bc32406a45',
+    password:'c5c741a3',
+    database:'heroku_fdc9f9844c451b9'
 })
 
 app.get('/api/get',(req,res)=>{
